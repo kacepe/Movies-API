@@ -2,7 +2,8 @@ version: 2
 jobs:
   build:
     working_directory: ~/test-circleci
-
+    machine:
+      image: ubuntu-1604:201903-01
     environment:
       BASH_ENV: ~/.bash_profile
 
