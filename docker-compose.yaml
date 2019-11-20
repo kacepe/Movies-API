@@ -18,4 +18,4 @@ services:
       - mongo
 
     ports:
-      - "${PUBLISH_PORT}:${SERVER_PORT}"
+      - "${PUBLISH_PORT}:${PORT}"
