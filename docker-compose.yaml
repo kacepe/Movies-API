@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - /data/db
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./lib:/usr/src/app/lib
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+
+    ports:
+      - "${PUBLISH_PORT}:${SERVER_PORT}"

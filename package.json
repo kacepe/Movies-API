@@ -1,0 +1,46 @@
+{
+  "name": "movies-api",
+  "version": "1.0.0",
+  "description": "Simple movies api",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "start:env": "env $(cat .env | xargs) npm start",
+    "test": "docker-compose -f docker-compose.test.yaml rm -v -f && docker-compose -f docker-compose.test.yaml up --force-recreate --build --exit-code-from api-test",
+    "test:all": "npm run lint && npm run test:unit && npm run test:integration",
+    "test:unit": "mocha --recursive --config tests/.mocharc.js tests/unit/**/*.spec.js",
+    "test:integration": "mocha --recursive --config tests/.mocharc.js tests/integrations/smoke_test.spec.js tests/integrations/**/*.spec.js",
+    "lint": "eslint lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kacepe/Movies-API.git"
+  },
+  "author": "Kacper Polak <kacper@hypequality.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kacepe/Movies-API/issues"
+  },
+  "homepage": "https://github.com/kacepe/Movies-API#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bluebird": "^3.7.1",
+    "debug": "^4.1.1",
+    "fastify": "^2.10.0",
+    "fastify-plugin": "^1.6.0",
+    "fastify-swagger": "^2.4.0",
+    "fluent-schema": "^0.7.7",
+    "fs-extra": "^8.1.0",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.3.4",
+    "pino": "^5.13.6"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
+  }
+}
