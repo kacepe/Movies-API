@@ -37,6 +37,7 @@ Swagger UI is exposed [here](https://kpolak-movies-api.herokuapp.com/documentati
 ## npm scripts
 - `start` - starts API
 - `start:env` - load environment variables from .env file then starts api
+- `start:docker` - runs app in docker with mongo db
 - `test:lint` - starts `eslint` for `lib` and `tests` directories
 - `test:unit` - runs unit tests
 - `test:integration` - runs integrations tests
