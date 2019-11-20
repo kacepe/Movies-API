@@ -1,0 +1,22 @@
+version: '3.2'
+
+services:
+  mongo-test:
+    image: mongo
+    logging:
+      # disable mongo logging for cleaner output
+      driver: none
+    volumes:
+      - /data/db
+
+  api-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./lib:/usr/src/app/lib
+      - ./tests:/usr/src/app/tests
+    env_file:
+      - .env.test
+    depends_on:
+      - mongo-test

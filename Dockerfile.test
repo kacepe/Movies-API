@@ -1,0 +1,11 @@
+FROM node:12
+EXPOSE ${SERVER_PORT}
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+COPY .eslintrc.yml ./
+
+RUN npm install
+
+CMD ["npm", "run", "test:all"]
