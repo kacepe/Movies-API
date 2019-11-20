@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node lib/index.js",
     "start:env": "env $(cat .env | xargs) npm start",
+    "start:docker": "docker-compose -f docker-compose.yaml up",
     "test": "docker-compose -f docker-compose.test.yaml rm -v -f && docker-compose -f docker-compose.test.yaml up --force-recreate --build --exit-code-from api-test",
     "test:all": "npm run lint && npm run test:unit && npm run test:integration",
     "test:unit": "mocha --recursive --config tests/.mocharc.js tests/unit/**/*.spec.js",
