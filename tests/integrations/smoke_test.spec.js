@@ -3,7 +3,7 @@ const should = require('should');
 const superTest = require('supertest');
 
 let apiServerProcess;
-global.request = superTest(`http://localhost:${process.env.SERVER_PORT}`);
+global.request = superTest(`http://localhost:${process.env.PORT}`);
 
 describe('Smoke Test', () => {
   it('should start API server', (done) => {

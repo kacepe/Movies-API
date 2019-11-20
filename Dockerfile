@@ -1,5 +1,5 @@
 FROM node:12
-EXPOSE ${SERVER_PORT}
+EXPOSE ${PORT}
 
 WORKDIR /usr/src/app
 

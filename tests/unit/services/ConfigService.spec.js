@@ -3,7 +3,7 @@ const ConfigService = require('../../../lib/services/ConfigService');
 
 describe('# ConfigService', () => {
   const source = {
-    SERVER_PORT: 123456,
+    PORT: 123456,
     MONGO_URL: 'mongo://blah:27017',
     MONGO_DB: 'db',
     OMDB_KEY: 'key',
@@ -11,7 +11,7 @@ describe('# ConfigService', () => {
   let instance;
 
   it('should throw error when config source missing required keys', () => {
-    should.throws(() => new ConfigService({}), Error, 'Missing required config key: SERVER_PORT');
+    should.throws(() => new ConfigService({}), Error, 'Missing required config key: PORT');
   });
 
   it('should throw error when config source is not an object', () => {
@@ -24,7 +24,7 @@ describe('# ConfigService', () => {
   });
 
   it('should return valid value for httpPort', () => {
-    instance.httpPort.should.eql(source.SERVER_PORT);
+    instance.httpPort.should.eql(source.PORT);
   });
 
   it('should return valid value for mongoUrl', () => {
