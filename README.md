@@ -10,7 +10,7 @@ Swagger UI is exposed [here](https://kpolak-movies-api.herokuapp.com/documentati
 `.env` file is a source of environment variables for this application it used by both - docker and local development
 
 - `NODE_ENV` - development/production/test
-- `SERVER_PORT` - port used by app, this port will be exposed by docker also
+- `PORT` - port used by app, this port will be exposed by docker also
 - `PUBLISH_PORT` - REQUIRED BY DOCKER - used by docker to map to container `SERVER_PORT`
 - `MONGO_URL` - mongo connection url
 - `MONGO_DB` - mongo database name
