@@ -14,12 +14,6 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-depenDencies-
-
-      - run: sudo apt-get update
-      - run:
-          name: install docker and docker-compose
-          command: |
-            sudo apt-get install -y docker docker-compose
       - save_cache:
           paths:
             - node_modules
