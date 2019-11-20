@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/test-circleci
+
+    environment:
+      BASH_ENV: ~/.bash_profile
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-depenDencies-
+
+      - run: sudo apt-get update
+      - run:
+          name: install docker and docker-compose
+          command: |
+            sudo apt-get install -y docker docker-compose
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+
+      # run tests!
+      - run: npm test
