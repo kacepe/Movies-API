@@ -1,4 +1,5 @@
 # Movies API
+[![CircleCI](https://circleci.com/gh/kacepe/Movies-API/tree/master.svg?style=svg)](https://circleci.com/gh/kacepe/Movies-API/tree/master)
 
 ## Live demo
 Live demo is hosted on Heroku [here](https://kpolak-movies-api.herokuapp.com/).\
