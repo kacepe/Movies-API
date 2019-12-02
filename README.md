@@ -62,9 +62,5 @@ To have it worked correctly you need to create `.env.test` file (see `.env.test.
 I know that the `Express.js` is the most popular and in most people opinion the best one, but I prefer to use `Fastify` by my own and here are few reasons why:
 - [Schema validator](https://github.com/fastify/fastify/blob/master/docs/Validation-and-Serialization.md) - It gives us ability to easily build schema for each route and fastify will validate and serialize input and output
 - [Logging](https://github.com/fastify/fastify/blob/master/docs/Logging.md) - Fastify has nice logging solution built-in using [pinio](https://github.com/pinojs/pino) (but you can inject your own also)
-- [Testing](https://github.com/fastify/fastify/blob/master/docs/Testing.md) - It comes with really nice interface for unit testing
+- [Testing](https://github.com/fastify/fastify/blob/master/docs/Testing.md) - It comes with really nice interface for unit testing and it's really fast - [benchmarks](https://www.fastify.io/benchmarks/)
 
-and it's really fast - [benchmarks](https://www.fastify.io/benchmarks/)
-
-#### Why Mongo?
-I heard that you use it a lot with Node.js solutions, so I believe that it's nice to show that I can use it, also data structure for this app doesn't have any special requirements like schema isolation so mongo is enough.
