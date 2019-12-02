@@ -51,7 +51,7 @@ Documentation is generated automatically for each route based on schema setted f
 
 
 ## Tests
-This repository contains few unit tests and integration tests - the coverage of them are pretty low because I belive it's more to show that I can do something instead spending time of hitting keyboard, if I'm wrong I gonna fill it up.
+This repository contains few unit tests and integration tests - the coverage of them are pretty low because I belive it's more to show that I can do something instead spending time of hitting keyboard.
 
 ### Running tests
 `npm test` - builds docker images for app and mongo and runs `npm run test:all` in container. \
