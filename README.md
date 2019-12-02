@@ -46,7 +46,7 @@ Swagger UI is exposed [here](https://kpolak-movies-api.herokuapp.com/documentati
 - `test` - build up docker images and run tests in docker
 
 ## swagger
-If you have `EXPOSE_SWAGGER` in your [.env file](#environment-variables) API will expose swagger ui in `/documentation` route.\
+If you have `EXPOSE_SWAGGER` in your [.env file](#environment-variables) API will expose swagger ui in `/documentation` route.
 Documentation is generated automatically for each route based on schema setted for it.
 
 
